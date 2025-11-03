@@ -35,3 +35,5 @@ Copy-Item -Path "C:\path\to\app-debug.apk" -Destination .\public\app-debug.apk
 ```
 
 Then start the site (`npm run dev`) and click the "Download APK" button on the home page.
+
+Note: The repository already includes a download link in `app/page.tsx` which points to `/app-debug.apk`. Make sure you commit the APK into `public/` only when you intend to publish it (APKs can be large). For CI/deploy, upload the APK to the `public/` folder prior to running your build step.
